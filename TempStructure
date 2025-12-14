@@ -6,7 +6,6 @@ webapp/
 ├─ frontend/
 │   ├─ index.php    ← واجهة المستخدم
 │   ├─ style.css
-│   └─ app.js
 ├─ backend/
 │   └─ recommendation.php ← منطق التوصية بالمطاعم
 database/

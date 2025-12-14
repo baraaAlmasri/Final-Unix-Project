@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Pull from GitHub') {
             steps {
-                git 'https://github.com/username/restaurant-recommendation.git'
+                git 'https://github.com/baraaAlmasri/Final-Unix-Project'
             }
         }
 

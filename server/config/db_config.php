@@ -1,15 +1,16 @@
-server/config/db_config.php
 <?php
 $servername = "localhost";
 $username = "root";
-$password = "xig@68596"; // ضع هنا كلمة مرور MySQL الخاصة بك
+$password = "xig@68596";
 $dbname = "restaurant_db";
 
-// إنشاء الاتصال
 $conn = new mysqli($servername, $username, $password, $dbname);
 
-// التحقق من الاتصال
+// Check connection
 if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
+    // فقط رسالة عامة بدون مسار
+    die("<div style='color:red; text-align:center; padding:20px;'>
+            ❌ Database connection failed. Please try again later.
+         </div>");
 }
 ?>
