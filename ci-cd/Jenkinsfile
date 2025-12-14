@@ -1,0 +1,17 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('Pull from GitHub') {
+            steps {
+                git 'https://github.com/username/restaurant-recommendation.git'
+            }
+        }
+
+        stage('Deploy to Server') {
+            steps {
+                sh './ci-cd/deploy.sh'
+            }
+        }
+    }
+}
