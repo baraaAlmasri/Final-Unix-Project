@@ -1,5 +1,4 @@
 USE restaurant_db;
-
 INSERT INTO restaurants (name, cuisine, rating) VALUES
 ('Pizza Place', 'Italian', 4.5),
 ('Sushi House', 'Japanese', 4.7),
