@@ -5,7 +5,6 @@
     <title>Restaurant Recommendation</title>
     <link rel="stylesheet" href="style.css">
     <style>
-        /* Reset بسيط */
         * {
             box-sizing: border-box;
             margin: 0;
@@ -91,7 +90,7 @@
             border-radius: 10px;
             font-size: 18px;
             font-weight: 500;
-            display: none; /* تظهر فقط عند النتيجة */
+            display: none;
         }
 
         .result.success {
@@ -141,7 +140,6 @@
             resultDiv.style.display = 'block';
             resultDiv.innerHTML = text;
 
-            // يمكن إضافة تصنيف حسب الرسالة
             if(text.includes("No recommendations")) {
                 resultDiv.className = 'result error';
             } else if(text.includes("Please enter")) {
