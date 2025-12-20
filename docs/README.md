@@ -1,41 +1,34 @@
-docs/README.md
-# Restaurant Recommendation System
+Unix Final Project – CI/CD Automated Restaurant Recommendation System
+Overview
 
-## مقدمة
-هذا المشروع عبارة عن نظام ويب بسيط لتقديم توصيات مطاعم بناءً على الوجبة المفضلة للمستخدم.
+This project demonstrates the automation of software development and deployment processes using a full CI/CD pipeline. The goal is to build a web-based Restaurant Recommendation System hosted on a virtualized environment and managed via automated workflows.
 
-## المتطلبات
-- سيرفر Ubuntu 24.04 LTS
-- LAMP Stack (Linux, Apache, MySQL, PHP)
-- Git و Jenkins لإدارة الكود و CI/CD
+The system allows users to input their favorite meal and receive restaurant recommendations from a pre-populated database. The project leverages modern DevOps tools to ensure smooth integration, testing, and deployment.
 
-## هيكل المشروع
-- `server/config/db_config.php` → إعدادات قاعدة البيانات
-- `webapp/frontend/index.php` → صفحة الواجهة الرئيسية
-- `webapp/frontend/style.css` → تنسيقات الواجهة
-- `webapp/frontend/app.js` → جافاسكربت للواجهة
-- `webapp/backend/recommendation.php` → منطق التوصية بالمطاعم
-- `database/schema.sql` → هيكل قاعدة البيانات
-- `database/populate.sql` → البيانات التجريبية
-- `ci-cd/` → ملفات Jenkins و سكربتات النشر و Git
-- `scripts/` → سكربتات للاختبار والنسخ الاحتياطي
-- `docs/architecture_diagram.png` → رسم توضيحي لتصميم النظام
+Features
 
-## خطوات التشغيل
-1. استيراد `schema.sql` و `populate.sql` في MySQL.
-2. تعديل `db_config.php` بمعلومات الاتصال الصحيحة.
-3. رفع ملفات المشروع إلى `/var/www/html/webapp/`.
-4. فتح المتصفح والذهاب إلى `http://<server-ip>/webapp/frontend/index.php`.
-5. استخدام النموذج لإدخال وجبة والحصول على التوصية.
+Full Stack Web Application: Includes frontend, backend, and database components.
 
-## CI/CD
-- Jenkins يقوم بسحب آخر نسخة من GitHub وتشغيل `deploy.sh` للنشر التلقائي.
-- `git_push.sh` لأتمتة رفع الكود إلى GitHub.
+Database Integration: Stores a list of restaurants for recommendation queries.
 
-## سكربتات المساعدة
-- `test.sh` → لاختبار وظائف التطبيق
-- `backup.sh` → أخذ نسخة احتياطية من قاعدة البيانات
+User-Friendly GUI: Accepts user input and returns personalized restaurant recommendations.
 
-## ملاحظات
-- تأكد أن Apache و MySQL و PHP تعمل بشكل صحيح على السيرفر.
-- استخدم `phpinfo()` لاختبار إعدادات PHP إذا لزم الأمر.
+Automated Git Workflow: Each team member pushes code changes automatically via a Bash script.
+
+CI/CD Pipeline: Managed through Jenkins to pull, build, test, and deploy the application.
+
+Dockerized Deployment: The application runs inside a Docker container for portability and consistency.
+
+SSH Access: Client connects to the server via SSH using VSCode for remote development.
+
+Architecture
+
+Application Server: Virtual machine or container hosting the application environment.
+
+Client Machine: Connects to the server via SSH to develop and interact with the application.
+
+GitHub Repository: Stores project code and enables team collaboration.
+
+Jenkins CI/CD: Automates building, testing, and deploying updates to the application.
+
+Docker Container: Hosts the application, ensuring consistency across environments.

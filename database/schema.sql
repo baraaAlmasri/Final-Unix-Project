@@ -1,5 +1,4 @@
 database/schema.sql
--- إنشاء قاعدة البيانات وجدول المطاعم
 CREATE DATABASE IF NOT EXISTS restaurant_db;
 USE restaurant_db;
 

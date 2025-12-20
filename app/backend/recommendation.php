@@ -1,8 +1,6 @@
 <?php
-// Include database configuration
 include '../../server/config/db_config.php';
 
-// Get the meal input from the form
 $meal = $_POST['meal'] ?? '';
 
 echo "<!DOCTYPE html>
@@ -44,7 +42,6 @@ echo "<!DOCTYPE html>
 <body>";
 if (!empty($meal)) {
 
-    // Prepare SQL to find a restaurant matching the cuisine/meal
     $sql = "SELECT name, cuisine, rating 
             FROM restaurants 
             WHERE cuisine LIKE ? 
